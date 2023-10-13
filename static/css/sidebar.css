@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.nav-item{
+    display: flex;
+    padding: 10px;
+
+
+}
+.nav-icon{
+
+    display: flex;
+    align-items: center;
+width: 40px;
+}
+
+.nav-text a{
+    margin-top: 5px;
+}
+.links{
+position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-right: 1px solid #d1d1d1; /* Optional: Add a border for separation */
+display: flex;
+flex-direction: column;
+
+align-items:center;
+
+
+}
+.links-cont{
+    width: 90%;
+}
+.dashb-cont{
+background-color: #0C144D;
+border-radius: 8px;
+}
+.dashboard{
+
+font-weight: bold;
+  margin-right: 20px;
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 40px;
+    width: 130px;
+font-family:sans-serif;
+}
+
+.links i{
+   
+    width: 15px;
+}
+.users{
+    font-weight: bold;
+    color: #3D3D3D;
+    margin-right: 20px;
+    height: 40px;
+    width: 99px;
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family:sans-serif;
+}
+.users a{
+    margin-top: 2px;
+}
+
+.product-l-req{
+    height: 40px;
+    
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+}
+.product-l-req a    {
+    margin-top: 2px;
+}
+.audit-trail{
+    font-weight: bold;
+    height: 40px;
+    width: 128px;
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: #3D3D3D;
+    font-family:sans-serif;
+}
+.transactions{
+    font-weight: bold;
+    height: 40px;
+    width: 150px;
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: #3D3D3D;
+    font-family:sans-serif;
+
+}
+
+.accounting{
+    color: #3D3D3D;
+    height: 40px;
+    width: 150px;
+    margin-top: 25px;
+    font-weight: bold;
+display: flex;
+align-items: center;
+font-family:sans-serif;
+}
+
+#navb{
+    display: none;
+}
+
+@media (max-width: 990px){
+
+    #navb{
+        display: block;
+    }
+    .links{
+        display: none;
+    }
+}
+/*for user*/
+.user{
+    font-weight: bold;
+    color: #3D3D3D;
+
+    height: 40px;
+    width: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family:sans-serif;
+}
