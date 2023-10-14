@@ -135,15 +135,15 @@
                         
                       <div class="links-cont" style="width: 100%;">
                         <div class="dashboard">
-                        <i class="fa fa-bar-chart" style="font-size: 22px;"></i> <a href="{{ url_for('dashboard')}}" style="text-decoration: none; color: black; font-size: 14px;">Dashboard</a>
+                        <i class="fa fa-bar-chart fa-sm" style=" padding-left: 20px; padding-right: 28px;"></i> <a href="{{ url_for('dashboard')}}" style="text-decoration: none; color: black; font-size: 14px;">Dashboard</a>
                     </div>
                     <div class="users">
-                        <i class="fa fa-user" style="font-size: 26px; margin-right: 5px;"></i> <a href="{{ url_for('users')}}" style="text-decoration: none; color: black;  font-size: 14px">Users</a>
+                        <i class="fa fa-user fa-lg" style=" margin-right: 5px; padding-left: 20px; padding-right: 23px;"></i> <a href="{{ url_for('users')}}" style="text-decoration: none; color: black;  font-size: 14px">Users</a>
                     </div>
                     
                     <div class="at-cont" style="background-color: #0C144D;border-radius: 8px;">
                       <div class="audit-trail">
-                        <i class="fa fa-history" style="font-size: 26px; color: #CDE2FF; margin-right: 5px;"></i> <a href="{{ url_for('auditTrail')}}" style="text-decoration: none; color: #CDE2FF; font-size: 14px">Audit trail</a>
+                        <i class="fa fa-history fa-lg" style=" color: #CDE2FF; margin-right: 5px; padding-left: 20px; padding-right: 23px;"></i> <a href="{{ url_for('auditTrail')}}" style="text-decoration: none; color: #CDE2FF; font-size: 14px">Audit trail</a>
                     </div>
                     </div>
                    
@@ -151,7 +151,7 @@
                       <div class="accordion-item">
                         <h2 class="accordion-header">
                           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne" style="display: flex; background:#F3F7F9;">
-                              <i class="fa fa-money"  style="font-size: 24px;" > </i><span style="margin-left:15px; font-size: 14px; margin-left: 20px; color: #3D3D3D; font-weight: bold;" >Accounting</span> 
+                            <i class="fa fa-money fa-lg" > </i><span style=" font-size: 14px; margin-left: 15px; color: #3D3D3D; font-weight: bold;" >Accounting</span>
                           </button>
                         </h2>
                         <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample" style="margin-left: 10px;">
@@ -183,22 +183,16 @@
                       </tr>
                     </thead>
                     <tbody>
+                      {% for log_entry in log_entries %}
                       <tr>
-                        <td>2023-10-04 15:45:00</td>
-                        <td >try</td>
-                        <td>Login</td>
+                        <td>{{ log_entry.created_at }}</td>
+                        <td >{{ log_entry.email }}</td>
+                        <td>{{ log_entry.bio }}</td>
                         <td>User logged in</td>
 
                       </tr>
-                      <tr>
-                        <td>2023-10-04 15:45:00</td>
-                        <td>asdadsas</td>
-                        <td>Add to cart
-                        </td>
-                        <td>Product name:
-                            <br>
-                            Quantity:
-                        </td>
+                      {% endfor %}
+                      
                    
                       </tr>
            

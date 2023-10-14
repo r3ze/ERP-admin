@@ -41,13 +41,13 @@ border-radius: 8px;
 .dashboard{
 
 font-weight: bold;
-  margin-right: 20px;
+
     margin-top: 100px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+
     height: 40px;
-    width: 130px;
+
 font-family:sans-serif;
 }
 
@@ -60,11 +60,10 @@ font-family:sans-serif;
     color: #3D3D3D;
     margin-right: 20px;
     height: 40px;
-    width: 99px;
-    margin-top: 25px;
+    margin-top: 20px;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+ 
     font-family:sans-serif;
 }
 .users a{
@@ -84,32 +83,21 @@ font-family:sans-serif;
 .audit-trail{
     font-weight: bold;
     height: 40px;
-    width: 128px;
-    margin-top: 25px;
+  
+    margin-top: 20px;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    color: #3D3D3D;
-    font-family:sans-serif;
-}
-.transactions{
-    font-weight: bold;
-    height: 40px;
-    width: 150px;
-    margin-top: 25px;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    color: #3D3D3D;
-    font-family:sans-serif;
 
+    color: #3D3D3D;
+   
+    font-family:sans-serif;
 }
 
 .accounting{
     color: #3D3D3D;
     height: 40px;
     width: 150px;
-    margin-top: 25px;
+  background-color: red;
     font-weight: bold;
 display: flex;
 align-items: center;
@@ -130,6 +118,22 @@ font-family:sans-serif;
     }
 }
 /*for user*/
+.products-cont{
+    background-color: #0C144D;
+    border-radius: 8px;
+    
+    }
+    .products{
+     font-weight: bold;
+     margin-right: 20px;
+     display: flex;
+     align-items: center;
+
+     height: 40px;
+   
+    font-family:sans-serif;
+    }
+
 .user{
     font-weight: bold;
     color: #3D3D3D;
@@ -140,5 +144,31 @@ font-family:sans-serif;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    font-family:sans-serif;
+}
+
+.transactions{
+    font-weight: bold;
+    height: 40px;
+
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+
+    color: #3D3D3D;
+    font-family:sans-serif;
+
+}
+
+.user-audit-trail{
+    font-weight: bold;
+    height: 40px;
+
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+
+    color: #3D3D3D;
+   
     font-family:sans-serif;
 }

@@ -1,10 +1,43 @@
-from flask import Flask, render_template
+import os
+from flask import Flask, render_template, request, url_for, redirect, session
+from flask_sqlalchemy import SQLAlchemy
+from model import db, Student, accounts
+from sqlalchemy.sql import func
 
-app = Flask(__name__)   
+basedir = os.path.abspath(os.path.dirname(__file__))
+
+app = Flask(__name__)
+app.secret_key = 'secret_key'
+app.config['SQLALCHEMY_DATABASE_URI'] =\
+        'sqlite:///' + os.path.join(basedir, 'db.sqlite3')
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+db.init_app(app)
 
 @app.route('/admin-dashboard')
 def dashboard():
-    return render_template('dashboard.html')
+    total_students = Student.query.count()
+    return render_template('dashboard.html', total_students=total_students)
+
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if(request.method=='POST'):
+        username=request.form['username']
+        password=request.form['password']
+
+        user = accounts.query.filter_by(username=username, password=password).first()
+        
+        if user:
+            session['user_id'] = user.user_id
+            return redirect (url_for('dashboard'))
+        else:
+            error_message = "Invalid username or password. Please try again."
+            return render_template('login.html', error_message=error_message)
+
+    return render_template('login.html')
+
+
 
 
 @app.route('/users')
@@ -14,7 +47,8 @@ def users():
 
 @app.route('/audit-trail')
 def auditTrail():
-    return render_template('auditTrail.html')
+    log_entries = Student.query.all()  # Query your database for log entries
+    return render_template('auditTrail.html', log_entries=log_entries)
 
 
 @app.route('/cashout-request')
