@@ -1,6 +1,10 @@
 *{
     margin: 0;
     padding: 0;
+        font-weight: 400;
+
+        font-family:assistant, sans-serif;
+        font-style: normal;
 }
 .nav-item{
     display: flex;
@@ -40,15 +44,15 @@ border-radius: 8px;
 }
 .dashboard{
 
-font-weight: bold;
-
     margin-top: 100px;
     display: flex;
     align-items: center;
 
     height: 40px;
+    font-weight: 400;
 
-font-family:sans-serif;
+font-family: Plus Jakarta Sans, sans-serif;
+font-style: normal;
 }
 
 .links i{
@@ -56,15 +60,16 @@ font-family:sans-serif;
     width: 15px;
 }
 .users{
-    font-weight: bold;
     color: #3D3D3D;
     margin-right: 20px;
     height: 40px;
     margin-top: 20px;
     display: flex;
     align-items: center;
- 
-    font-family:sans-serif;
+    font-weight: 400;
+
+font-family:assistant, sans-serif;
+font-style: normal;
 }
 .users a{
     margin-top: 2px;
@@ -81,7 +86,10 @@ font-family:sans-serif;
     margin-top: 2px;
 }
 .audit-trail{
-    font-weight: bold;
+    font-weight: 400;
+
+    font-family:assistant, sans-serif;
+    font-style: normal;
     height: 40px;
   
     margin-top: 20px;
@@ -89,19 +97,19 @@ font-family:sans-serif;
     align-items: center;
 
     color: #3D3D3D;
-   
-    font-family:sans-serif;
+  
 }
 
 .accounting{
     color: #3D3D3D;
     height: 40px;
     width: 150px;
-  background-color: red;
-    font-weight: bold;
 display: flex;
 align-items: center;
-font-family:sans-serif;
+font-weight: 400;
+
+font-family:assistant, sans-serif;
+font-style: normal;
 }
 
 #navb{

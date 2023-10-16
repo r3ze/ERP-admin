@@ -23,3 +23,14 @@ class accounts(db.Model):
 
     def __repr__(self):
         return f'<accounts {self.username}>'
+    
+class users(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(100), nullable=False)
+    password = db.Column(db.String(100), nullable=False)
+    email = db.Column(db.String(80), unique=True, nullable=False)
+    role = db.Column(db.String(100), nullable=False)
+    status = db.Column(db.String(100), nullable=False)
+
+    def __repr__(self):
+        return f'<users {self.username}>'
